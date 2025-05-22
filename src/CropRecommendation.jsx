@@ -21,7 +21,7 @@ function CropRecommendation() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("https://crop-recommendation-system-backend.onrender.com/", inputs);
+      const response = await axios.post("https://crop-recommendation-system-backend.onrender.com/predict", inputs);
       setResult(response.data.crop);
     } catch (error) {
       console.error("Error fetching prediction:", error);
